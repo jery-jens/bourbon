@@ -19,9 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slugId = window.location.pathname.split("/")[1];
     
-    if (slugId === SLUG_ID["360clean"]) {
-        console.log(window.location)
-    } else if (slugId === SLUG_ID.cleanaround) {
-
-    }
+    // if (slugId === SLUG_ID["360clean"]) {
+    //    window.location = DOMAINS["360clean"] + window.location.pathname;
+    // } else if (slugId === SLUG_ID.cleanaround) {
+    //     window.location = DOMAINS.cleanaround + window.location.pathname;
+    // } else if (slugId === SLUG_ID.everclean) {
+    //     window.location = DOMAINS.everclean + window.location.pathname;
+    // } else if (slugId === SLUG_ID.perpetua) {
+    //     window.location = DOMAINS.perpetua + window.location.pathname;
+    // };
 });
