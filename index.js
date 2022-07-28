@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "perpetua": "perpetua",
     };
 
-    const slugId = window.location.pathname.split("/");
-    console.log(slugId);
+    const slugId = window.location.pathname.split("/")[1];
+    
+    if (slugId === SLUG_ID["360clean"]) {
+        console.log(window.location)
+    } else if (slugId === SLUG_ID.cleanaround) {
+
+    }
 });
