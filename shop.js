@@ -37,8 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const productPrice = Number(innerBox.querySelector(".inner-product-price").innerHTML);
             const productName = innerBox.getAttribute("data-product");
 
-            console.log(pri)
-
             minus.addEventListener("click", () => {
                 if (Number(amount.innerHTML) !== 0) {
                     amount.innerHTML = Number(amount.innerHTML) - 1;
