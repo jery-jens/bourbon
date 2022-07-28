@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const productPrice = Number(innerBox.querySelector(".inner-product-price").innerHTML);
             const productName = innerBox.getAttribute("data-product");
 
+            console.log(pri)
+
             minus.addEventListener("click", () => {
                 if (Number(amount.innerHTML) !== 0) {
                     amount.innerHTML = Number(amount.innerHTML) - 1;
@@ -64,6 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 
     form.addEventListener("submit", (e) => {
-        window.location = window.location.pathname.replace("shot", "out-of-stock");
+        window.location = window.location.pathname.replace("shop", "out-of-stock");
     });
 });
