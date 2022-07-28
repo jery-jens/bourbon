@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
      * Selector
      */
 
+    console.log("test")
+
     const productBoxes = document.querySelectorAll(".product-box");
     let price = 0;
+
+    console.log(productBoxes)
 
     productBoxes.forEach((box) => {
         const innerBoxes = box.querySelectorAll(".product-inner");
@@ -36,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const productPrice = Number(innerBox.querySelector(".inner-product-price").innerHTML);
             const productName = innerBox.getAttribute("data-product");
+
+            console.log(innerBox);
 
             minus.addEventListener("click", () => {
                 if (Number(amount.innerHTML) !== 0) {
