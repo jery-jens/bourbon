@@ -19,10 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slugId = window.location.pathname.split("/")[1];
     
-    if (slugId === SLUG_ID["360clean"]) {
-        console.log(DOMAINS["360clean"])
-        console.log(window.location.hostname === DOMAINS["360clean"]);
-        //    window.location = DOMAINS["360clean"] + window.location.pathname;
+    if (slugId === SLUG_ID["360clean"] && window.location.hostname !== DOMAINS["360clean"]) {
+        window.location = DOMAINS["360clean"] + window.location.pathname;
     } else if (slugId === SLUG_ID.cleanaround) {
         // window.location = DOMAINS.cleanaround + window.location.pathname;
     } else if (slugId === SLUG_ID.everclean) {
