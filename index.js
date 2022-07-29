@@ -20,22 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const slugId = window.location.pathname.split("/")[1];
     
     if (slugId === SLUG_ID["360clean"] && window.location.hostname !== DOMAINS["360clean"]) {
-        window.location = DOMAINS["360clean"] + window.location.pathname;
+        window.location = "https://" + DOMAINS["360clean"] + window.location.pathname;
     } else if (slugId === SLUG_ID.cleanaround && window.location.hostname !== DOMAINS.cleanaround) {
-        window.location = DOMAINS.cleanaround + window.location.pathname;
+        window.location = "https://" + DOMAINS.cleanaround + window.location.pathname;
     } else if (slugId === SLUG_ID.everclean && window.location.hostname !== DOMAINS.everclean) {
-        window.location = DOMAINS.everclean+ window.location.pathname;
+        window.location = "https://" + DOMAINS.everclean+ window.location.pathname;
     } else if (slugId === SLUG_ID.perpetua && window.location.hostname !== DOMAINS.perpetua) {
-        window.location = DOMAINS.perpetua + window.location.pathname;
+        window.location = "https://" + DOMAINS.perpetua + window.location.pathname;
     };
 
     if (slugId !== SLUG_ID["360clean"] && window.location.hostname === DOMAINS["360clean"]) {
-        window.location = window.location.hostname + "/" + SLUG_ID["360clean"] + "/landing-1";
+        window.location = "https://" + window.location.hostname + "/" + SLUG_ID["360clean"] + "/landing-1";
     } else if (slugId === SLUG_ID.cleanaround && window.location.hostname !== DOMAINS.cleanaround) {
-        window.location = DOMAINS.cleanaround + window.location.pathname;
+        window.location = "https://" + window.location.hostname + "/" + SLUG_ID["360clean"] + "/landing-1";
     } else if (slugId === SLUG_ID.everclean && window.location.hostname !== DOMAINS.everclean) {
-        window.location = DOMAINS.everclean+ window.location.pathname;
+        window.location = "https://" + window.location.hostname + "/" + SLUG_ID["360clean"] + "/landing-1";
     } else if (slugId === SLUG_ID.perpetua && window.location.hostname !== DOMAINS.perpetua) {
-        window.location = DOMAINS.perpetua + window.location.pathname;
+        window.location = "https://" + window.location.hostname + "/" + SLUG_ID["360clean"] + "/landing-1";
     };
 });
