@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
      */
 
     const DOMAINS = {
-        "everclean": "https://everclean-kitchen.com",
-        "cleanaround": "/https://clean-around-kitchen.com",
-        "360clean": "https://360-clean-kitchen.com",
-        "perpetua": "https://perpetua-kitchen.com",
+        "everclean": "www.everclean-kitchen.com",
+        "cleanaround": "www.clean-around-kitchen.com",
+        "360clean": "www.360-clean-kitchen.com",
+        "perpetua": "www.perpetua-kitchen.com",
     };
 
     const SLUG_ID = {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (slugId === SLUG_ID["360clean"]) {
         console.log(DOMAINS["360clean"])
-        console.log(window.location.hostname);
+        console.log(window.location.hostname === DOMAINS["360clean"]);
         //    window.location = DOMAINS["360clean"] + window.location.pathname;
     } else if (slugId === SLUG_ID.cleanaround) {
         // window.location = DOMAINS.cleanaround + window.location.pathname;
