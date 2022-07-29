@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (slugId === SLUG_ID["360clean"] && window.location.hostname !== DOMAINS["360clean"]) {
         window.location = DOMAINS["360clean"] + window.location.pathname;
-    } else if (slugId === SLUG_ID.cleanaround) {
-        // window.location = DOMAINS.cleanaround + window.location.pathname;
-    } else if (slugId === SLUG_ID.everclean) {
-        // window.location = DOMAINS.everclean + window.location.pathname;
-    } else if (slugId === SLUG_ID.perpetua) {
-        // window.location = DOMAINS.perpetua + window.location.pathname;
+    } else if (slugId === SLUG_ID.cleanaround && window.location.hostname !== DOMAINS.cleanaround) {
+        window.location = DOMAINS.cleanaround + window.location.pathname;
+    } else if (slugId === SLUG_ID.everclean && window.location.hostname !== DOMAINS.everclean) {
+        window.location = DOMAINS.everclean+ window.location.pathname;
+    } else if (slugId === SLUG_ID.perpetua && window.location.hostname !== DOMAINS.perpetua) {
+        window.location = DOMAINS.perpetua + window.location.pathname;
     };
 });
