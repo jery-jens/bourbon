@@ -80,12 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     };
 
-                    amount.innerHTML = productAmount;
-                    productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
-                    plus.classList.remove("not-active");
-                    price = price - productPrice;
-                    document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
-                    document.getElementById(productName).value = productAmount;
+                    // amount.innerHTML = productAmount;
+                    // productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
+                    // plus.classList.remove("not-active");
+                    // price = price - productPrice;
+                    // document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
+                    // document.getElementById(productName).value = productAmount;
                 };
             });
 
