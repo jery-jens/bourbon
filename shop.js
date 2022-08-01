@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const productName = innerBox.getAttribute("data-product");
             console.log(productName)
 
-            const hasDiscount = Boolean(document.getElementById(productName).getAttribute("data-discount")) ?? false;
+            // const hasDiscount = Boolean(document.getElementById(productName).getAttribute("data-discount")) ?? false;
 
         //     minus.addEventListener("click", () => {
         //         if (productAmount !== 0) {
