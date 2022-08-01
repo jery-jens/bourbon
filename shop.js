@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         innerBoxes.forEach((innerBox, index) => {
             const amount = innerBox.querySelector(".amount");
+            let productAmount = 0;
             
             const minus = innerBox.querySelector(".minus");
             minus.style.userSelect = "none";
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             plus.addEventListener("click", () => {
-                let productAmount = Number(amount.innerHTML) + 1;
+                productAmount = Number(amount.innerHTML) + 1;
 
                 if (productAmount === 5) {
                     console.log('stopppp', productAmount);
