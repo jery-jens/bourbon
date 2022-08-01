@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const productPrice = Number(innerBox.querySelector(".inner-product-price").innerHTML);
             const productName = innerBox.getAttribute("data-product");
+            console.log(productName)
 
             const hasDiscount = Boolean(document.getElementById(productName).getAttribute("data-discount"));
 
