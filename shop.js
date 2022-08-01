@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (hasDiscount) {
                         let takeOff = ((productPrice * 4) / 100) * 85;
-                        let add = (productPrice / 100) * 80;
+                        let add = ((productPrice * 5) / 100) * 80;
     
                         price = (price - takeOff) + add;
                     } else {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 break;
                             case 5:
                                 takeOff = ((productPrice * 4) / 100) * 85;
-                                add = (productPrice / 100) * 80;
+                                add = ((productPrice * 5) / 100) * 80;
                                 break;
                             default:
                                 add = (productPrice / 100) * 100
