@@ -58,6 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (productAmount === 5) {
                     amount.innerHTML = productAmount;
                     plus.classList.add("not-active");
+
+                    if (hasDiscount) {
+                        let takeOff = ((productPrice * 4) / 100) * 85;
+                        let add = (productPrice / 100) * 80;
+    
+                        price = (price - takeOff) + add;
+                    } else {
+                        price = price + productPrice;
+                    };
                 } else if (productAmount < 5) {
                     amount.innerHTML = productAmount;
                     productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
@@ -66,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         let takeOff = 0;
                         let add = 0;
                         
-    
                         switch (productAmount) {
                             case 1:
                                 takeOff = 0;
