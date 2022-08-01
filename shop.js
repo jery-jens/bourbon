@@ -39,12 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const productName = innerBox.getAttribute("data-product");
 
             minus.addEventListener("click", () => {
-                if (Number(amount.innerHTML) !== 0) {
-                    amount.innerHTML = Number(amount.innerHTML) - 1;
-                    Number(amount.innerHTML) === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
+                if (productAmount !== 0) {
+                    productAmount = productAmount - 1;
+                    amount.innerHTML = productAmount;
+                    productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
+                    plus.classList.remove("not-active");
                     price = price - productPrice;
                     document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
-                    document.getElementById(productName).value = Number(amount.innerHTML);
+                    document.getElementById(productName).value = productAmount;
                 };
             });
 
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (productAmount === 5) {
                     amount.innerHTML = productAmount;
+                    plus.classList.add("not-active");
                 } else if (productAmount < 5) {
                     amount.innerHTML = productAmount;
                     productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
