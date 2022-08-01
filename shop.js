@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
 
     form.addEventListener("submit", (e) => {
+        e.preventDefault();
         window.location = window.location.pathname.replace("shop", "out-of-stock");
     });
 });
