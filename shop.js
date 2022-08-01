@@ -159,9 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("yaaaah")
             console.log(scent.parentElement.parentElement.classList.contains("active"));
             if (scent.parentElement.parentElement.classList.contains("active")) {
-                scent.parentElement.parentElement.classList.classList.remove("active");
+                scent.parentElement.parentElement.classList.remove("active");
             } else {
-                scent.parentElement.parentElement.classList.classList.add("active");
+                scent.parentElement.parentElement.classList.add("active");
             };
         });
     });
