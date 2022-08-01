@@ -53,21 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (productAmount === 5) {
                     console.log('stopppp', productAmount);
-                } else if (productAmount > 5) {
+                } else if (productAmount < 5) {
                     console.log('not yet', productAmount);
-                }
-
-                // if (Number(amount.innerHTML) < 5) {
-                //     Number(amount.innerHTML) === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
-                //     price = price + productPrice;
-                // } else if (Number(amount.innerHTML) === 5) {
-                //     console.log("stoppppp");
-                //     amount.innerHTML = Number(5);
-                //     console.log(amount.innerHTML)
-                // };
+                    productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
+                    price = price + productPrice;
+                };
 
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
-                document.getElementById(productName).value = Number(amount.innerHTML);
+                document.getElementById(productName).value = productAmount;
             });
         });
     });
