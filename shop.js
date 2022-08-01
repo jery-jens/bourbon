@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (productAmount === 5) {
                     console.log('stopppp', productAmount);
-                } else {
+                } else if (productAmount > 5) {
                     console.log('not yet', productAmount);
                 }
 
