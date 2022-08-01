@@ -48,16 +48,22 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             plus.addEventListener("click", () => {
-                amount.innerHTML = Number(amount.innerHTML) + 1;
+                let productAmount = Number(amount.innerHTML) + 1;
 
-                if (Number(amount.innerHTML) < 5) {
-                    Number(amount.innerHTML) === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
-                    price = price + productPrice;
-                } else if (Number(amount.innerHTML) === 5) {
-                    console.log("stoppppp");
-                    amount.innerHTML = Number(5);
-                    console.log(amount.innerHTML)
-                };
+                if (productAmount === 5) {
+                    console.log('stopppp', productAmount);
+                } else {
+                    console.log('not yet', productAmount);
+                }
+
+                // if (Number(amount.innerHTML) < 5) {
+                //     Number(amount.innerHTML) === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
+                //     price = price + productPrice;
+                // } else if (Number(amount.innerHTML) === 5) {
+                //     console.log("stoppppp");
+                //     amount.innerHTML = Number(5);
+                //     console.log(amount.innerHTML)
+                // };
 
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
                 document.getElementById(productName).value = Number(amount.innerHTML);
