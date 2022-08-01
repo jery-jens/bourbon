@@ -155,7 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const scents = document.querySelectorAll(".scent-radio");
 
     scents.forEach((scent) => {
-        scent.addEventListener("onchange", (e) => {
+        console.log(scent);
+        scent.addEventListener("input", (e) => {
             console.log(scent.value, scent.checked);
         });
     });
