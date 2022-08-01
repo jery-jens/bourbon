@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     } else {
                         price = price - productPrice;
                     };
-                    
+
                     document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
                     document.getElementById(productName).value = productAmount;
                 };
@@ -145,6 +145,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
                 document.getElementById(productName).value = productAmount;
             });
+        });
+    });
+
+    /**
+     * Scents
+     */
+
+    const scents = document.querySelectorAll(".scent-radio");
+
+    scents.forEach((scent) => {
+        scent.addEventListener("onchange", (e) => {
+            console.log(scent.value, scent.checked);
         });
     });
 
