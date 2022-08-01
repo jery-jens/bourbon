@@ -43,6 +43,42 @@ document.addEventListener("DOMContentLoaded", () => {
             minus.addEventListener("click", () => {
                 if (productAmount !== 0) {
                     productAmount = productAmount - 1;
+
+                    if (hasDiscount) {
+                        let takeOff = 0;
+                        let add = 0;
+                        
+                        switch (productAmount) {
+                            case 1:
+                                takeOff = 0;
+                                add = (productPrice / 100) * 100;
+                                break;
+                            case 2:
+                                takeOff = (productPrice / 100) * 100;
+                                add = ((productPrice * 2) / 100) * 90;
+                                break;
+                            case 3:
+                                takeOff = ((productPrice * 2) / 100) * 90;
+                                add = ((productPrice * 3) / 100) * 87.5;
+                                break;
+                            case 4:
+                                takeOff = ((productPrice * 3) / 100) * 87.5;
+                                add = ((productPrice * 4) / 100) * 85;
+                                break;
+                            case 5:
+                                takeOff = ((productPrice * 4) / 100) * 85;
+                                add = ((productPrice * 5) / 100) * 80;
+                                break;
+                            default:
+                                add = (productPrice / 100) * 100
+                                break;
+                        }
+                        
+                        console.log(productAmount, add, takeOff);
+                    } else {
+
+                    };
+
                     amount.innerHTML = productAmount;
                     productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
                     plus.classList.remove("not-active");
