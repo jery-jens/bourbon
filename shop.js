@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 break;
                         }
 
-                        price = (price - takeOff) - add;
+                        price = (price - takeOff);
                         
                         console.log(price);
                     } else {
