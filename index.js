@@ -38,4 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (slugId !== SLUG_ID.perpetua && window.location.hostname === DOMAINS.perpetua) {
         window.location = "https://" + window.location.hostname + "/" + SLUG_ID.perpetua + "/landing-1";
     };
-});
+});  
