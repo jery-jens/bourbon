@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                 add = (productPrice / 100) * 100
                                 break;
                         }
+
+                        price = (price - takeOff) - add;
                         
                         console.log(productAmount, add, takeOff);
                     } else {
