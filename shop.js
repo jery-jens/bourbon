@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const productPrice = Number(innerBox.querySelector(".inner-product-price").innerHTML);
             const productName = innerBox.getAttribute("data-product");
 
+            const hasDiscount = document.getElementById(productName).getAttribute("data-discount");
+            console.log(Boolean(hasDiscount));
+
             minus.addEventListener("click", () => {
                 if (productAmount !== 0) {
                     productAmount = productAmount - 1;
