@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
             minus.addEventListener("click", () => {
                 if (productAmount !== 0) {
                     productAmount = productAmount - 1;
+                    amount.innerHTML = productAmount;
+                    productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
+                    plus.classList.remove("not-active");
 
                     if (hasDiscount) {
                         let takeOff = 0;
@@ -75,17 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
 
                         price = (price - takeOff) + add;   
-                        console.log(price);                     
                     } else {
-
+                        price = price - productPrice;
                     };
-
-                    // amount.innerHTML = productAmount;
-                    // productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
-                    // plus.classList.remove("not-active");
-                    // price = price - productPrice;
-                    // document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
-                    // document.getElementById(productName).value = productAmount;
+                    
+                    document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
+                    document.getElementById(productName).value = productAmount;
                 };
             });
 
