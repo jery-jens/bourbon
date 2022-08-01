@@ -55,22 +55,27 @@ document.addEventListener("DOMContentLoaded", () => {
                             case 0:
                                 add = 0;
                                 takeOff = (productPrice / 100) * 100;
+                                innerBox.querySelector(".discount-label").style.display = "none";
                                 break;
                             case 1:
                                 add = (productPrice / 100) * 100;
                                 takeOff = ((productPrice * 2) / 100) * 90;
+                                innerBox.querySelector(".discount-label").innerHTML = "10% off";
                                 break;
                             case 2:
                                 add = ((productPrice * 2) / 100) * 90;
                                 takeOff = ((productPrice * 3) / 100) * 87.5;
+                                innerBox.querySelector(".discount-label").innerHTML = "12.5% off";
                                 break;
                             case 3:
                                 add = ((productPrice * 3) / 100) * 87.5;
                                 takeOff = ((productPrice * 4) / 100) * 85;
+                                innerBox.querySelector(".discount-label").innerHTML = "15% off";
                                 break;
                             case 4:
                                 add = ((productPrice * 4) / 100) * 85;
                                 takeOff = ((productPrice * 5) / 100) * 80;
+                                innerBox.querySelector(".discount-label").innerHTML = "20% off";
                                 break;
                             default:
                                 takeOff = (productPrice / 100) * 100
@@ -114,22 +119,28 @@ document.addEventListener("DOMContentLoaded", () => {
                             case 1:
                                 takeOff = 0;
                                 add = (productPrice / 100) * 100;
+                                innerBox.querySelector(".discount-label").style.display = "none";
                                 break;
                             case 2:
                                 takeOff = (productPrice / 100) * 100;
                                 add = ((productPrice * 2) / 100) * 90;
+                                innerBox.querySelector(".discount-label").style.display = "block";
+                                innerBox.querySelector(".discount-label").innerHTML = "10% off";
                                 break;
                             case 3:
                                 takeOff = ((productPrice * 2) / 100) * 90;
                                 add = ((productPrice * 3) / 100) * 87.5;
+                                innerBox.querySelector(".discount-label").innerHTML = "12.5% off";
                                 break;
                             case 4:
                                 takeOff = ((productPrice * 3) / 100) * 87.5;
                                 add = ((productPrice * 4) / 100) * 85;
+                                innerBox.querySelector(".discount-label").innerHTML = "15% off";
                                 break;
                             case 5:
                                 takeOff = ((productPrice * 4) / 100) * 85;
                                 add = ((productPrice * 5) / 100) * 80;
+                                innerBox.querySelector(".discount-label").innerHTML = "20% off";
                                 break;
                             default:
                                 add = (productPrice / 100) * 100
@@ -156,8 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     scents.forEach((scent) => {
         scent.addEventListener("click", (e) => {
-            console.log("yaaaah")
-            console.log(scent.parentElement.parentElement.classList.contains("active"));
             if (scent.parentElement.parentElement.classList.contains("active")) {
                 scent.parentElement.parentElement.classList.remove("active");
             } else {
