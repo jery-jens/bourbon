@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
                     price = price + productPrice;
 
-                    console.log((productPrice / 100) * 0.9);
+                    console.log((productPrice / 100) * 90);
                 };
 
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
