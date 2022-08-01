@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     scents.forEach((scent) => {
         scent.addEventListener("click", (e) => {
+            console.log("yaaaah")
             if (scent.classList.contains("active")) {
                 scent.classList.remove("active");
             } else {
