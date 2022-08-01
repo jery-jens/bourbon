@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             plus.addEventListener("click", () => {
-                productAmount = Number(amount.innerHTML) + 1;
+                productAmount = productAmount + 1;
 
                 if (productAmount === 5) {
                     console.log('stopppp', productAmount);
