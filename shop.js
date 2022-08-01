@@ -149,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         price = (price - takeOff) + add;
                     } else {
+                        innerBox.querySelector(".discount-label").innerHTML = "20% off";
                         price = price + productPrice;
                     };
                 };
