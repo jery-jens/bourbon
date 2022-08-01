@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 productAmount = productAmount + 1;
 
                 if (productAmount === 5) {
-                    console.log('stopppp', productAmount);
+                    amount.innerHTML = productAmount;
                 } else if (productAmount < 5) {
-                    console.log('not yet', productAmount);
+                    amount.innerHTML = productAmount;
                     productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
                     price = price + productPrice;
                 };
