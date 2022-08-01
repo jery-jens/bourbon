@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         let add = ((productPrice * 5) / 100) * 80;
     
                         price = (price - takeOff) + add;
+                        innerBox.querySelector(".discount-label").innerHTML = "20% off";
                     } else {
                         price = price + productPrice;
                     };
@@ -148,7 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         price = (price - takeOff) + add;
                     } else {
-                        innerBox.querySelector(".discount-label").innerHTML = "20% off";
                         price = price + productPrice;
                     };
                 };
