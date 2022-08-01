@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     price = price + productPrice;
                 } else {
                     console.log("stoppppp");
-                    amount.innerHTML = 5;
+                    amount.innerHTML = Number(5);
+                    console.log(amount.innerHTML)
                 };
 
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
