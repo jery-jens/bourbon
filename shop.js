@@ -152,16 +152,16 @@ document.addEventListener("DOMContentLoaded", () => {
      * Scents
      */
 
-    const scents = document.querySelectorAll(".scent-image");
+    const scents = document.querySelectorAll(".scent-radio");
 
     scents.forEach((scent) => {
         scent.addEventListener("click", (e) => {
             console.log("yaaaah")
-            console.log(scent.classList.contains("active"));
-            if (scent.classList.contains("active")) {
-                scent.classList.remove("active");
+            console.log(scent.parentElement.parentElement.classList.contains("active"));
+            if (scent.parentElement.parentElement.classList.contains("active")) {
+                scent.parentElement.parentElement.classList.classList.remove("active");
             } else {
-                scent.classList.add("active");
+                scent.parentElement.parentElement.classList.classList.add("active");
             };
         });
     });
