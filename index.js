@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "everclean": "ec",
         "cleanaround": "ca",
         "360clean": "360clean",
-        "perpetua": "perpetua",
+        "perpetua": "reveal-it",
     };
 
     const slugId = window.location.pathname.split("/")[1];
