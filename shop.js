@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             minus.addEventListener("click", () => {
                 if (productAmount !== 0) {
                     productAmount = productAmount - 1;
+                    console.log(productAmount);
 
                     if (hasDiscount) {
                         let takeOff = 0;
@@ -74,9 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 break;
                         }
 
-                        price = (price - takeOff);
-                        
-                        console.log(price);
+                        price = (price - takeOff);                        
                     } else {
 
                     };
