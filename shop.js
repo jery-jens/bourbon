@@ -50,32 +50,32 @@ document.addEventListener("DOMContentLoaded", () => {
                         let add = 0;
                         
                         switch (productAmount) {
+                            case 0:
+                                add = 0;
+                                takeOff = (productPrice / 100) * 100;
+                                break;
                             case 1:
-                                takeOff = 0;
                                 add = (productPrice / 100) * 100;
+                                takeOff = ((productPrice * 2) / 100) * 90;
                                 break;
                             case 2:
-                                takeOff = (productPrice / 100) * 100;
                                 add = ((productPrice * 2) / 100) * 90;
+                                takeOff = ((productPrice * 3) / 100) * 87.5;
                                 break;
                             case 3:
-                                takeOff = ((productPrice * 2) / 100) * 90;
                                 add = ((productPrice * 3) / 100) * 87.5;
+                                takeOff = ((productPrice * 4) / 100) * 85;
                                 break;
                             case 4:
-                                takeOff = ((productPrice * 3) / 100) * 87.5;
                                 add = ((productPrice * 4) / 100) * 85;
-                                break;
-                            case 5:
-                                takeOff = ((productPrice * 4) / 100) * 85;
-                                add = ((productPrice * 5) / 100) * 80;
+                                takeOff = ((productPrice * 5) / 100) * 80;
                                 break;
                             default:
-                                add = (productPrice / 100) * 100
+                                takeOff = (productPrice / 100) * 100
                                 break;
                         }
 
-                        price = (price - takeOff);                        
+                        price = (price - takeOff) + add;                        
                     } else {
 
                     };
