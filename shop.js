@@ -38,8 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const productPrice = Number(innerBox.querySelector(".inner-product-price").innerHTML);
             const productName = innerBox.getAttribute("data-product");
 
-            const hasDiscount = document.getElementById(productName).getAttribute("data-discount");
-            console.log(Boolean(hasDiscount));
+            const hasDiscount = Boolean(document.getElementById(productName).getAttribute("data-discount"));
 
             minus.addEventListener("click", () => {
                 if (productAmount !== 0) {
@@ -63,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     amount.innerHTML = productAmount;
                     productAmount === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
                     price = price + productPrice;
+
+                    console.log((productPrice / 100) * 0.9);
                 };
 
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
