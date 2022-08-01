@@ -48,8 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             plus.addEventListener("click", () => {
-                if ((Number(amount.innerHTML) + 1) < 5) {
-                    amount.innerHTML = Number(amount.innerHTML) + 1;
+                amount.innerHTML = Number(amount.innerHTML) + 1;
+
+                if (Number(amount.innerHTML) < 5) {
                     Number(amount.innerHTML) === 0 ? minus.classList.add("not-active") : minus.classList.remove("not-active");
                     price = price + productPrice;
                 } else if (Number(amount.innerHTML) === 5) {
