@@ -152,12 +152,15 @@ document.addEventListener("DOMContentLoaded", () => {
      * Scents
      */
 
-    const scents = document.querySelectorAll(".scent-radio");
+    const scents = document.querySelectorAll(".scent-image");
 
     scents.forEach((scent) => {
-        console.log(scent);
-        scent.addEventListener("input", (e) => {
-            console.log(scent.value, scent.checked);
+        scent.addEventListener("click", (e) => {
+            if (scent.classList.contains("active")) {
+                scent.classList.remove("active");
+            } else {
+                scent.classList.add("active");
+            };
         });
     });
 
