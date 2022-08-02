@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "everclean": "www.everclean-kitchen.com",
         "cleanaround": "www.clean-around-kitchen.com",
         "360clean": "www.360-clean-kitchen.com",
-        "perpetua": "www.reveal-it-kitchen.com",
+        "perpetua": "www.reveal-uv-kitchen.com",
     };
 
     const SLUG_ID = {
