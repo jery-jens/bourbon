@@ -169,12 +169,14 @@ document.addEventListener("DOMContentLoaded", () => {
         scent.addEventListener("click", (e) => {
             for (let j = 0; j < scents.length; j++) {
                 if (i === j) {
+                    console.log(i)
                     if (scent.parentElement.parentElement.classList.contains("active")) {
                         scent.parentElement.parentElement.classList.remove("active");
                     } else {
                         scent.parentElement.parentElement.classList.add("active");
                     };
                 } else {
+                    console.log(i)
                     scent.parentElement.parentElement.classList.remove("active");
                 };
             };
