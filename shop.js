@@ -167,17 +167,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     scents.forEach((scent, i) => {
         scent.addEventListener("click", (e) => {
-            scents.forEach((check, j) => {
-                if (j === i) {
-                    if (scent.parentElement.parentElement.classList.contains("active")) {
-                        scent.parentElement.parentElement.classList.remove("active");
-                    } else {
-                        scent.parentElement.parentElement.classList.add("active");
-                    };        
-                } else {
-                    scent.parentElement.parentElement.classList.remove("active");
-                };
-            });
+            if (scent.parentElement.parentElement.classList.contains("active")) {
+                scent.parentElement.parentElement.classList.remove("active");
+            } else {
+                scent.parentElement.parentElement.classList.add("active");
+            };
         });
     });
 
