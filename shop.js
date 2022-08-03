@@ -168,13 +168,15 @@ document.addEventListener("DOMContentLoaded", () => {
     scents.forEach((scent, i) => {
         scent.addEventListener("click", (e) => {
             for (let j = 0; j < scents.length; j++) {
-                console.log(i === j, i, j);
-            };
-
-            if (scent.parentElement.parentElement.classList.contains("active")) {
-                scent.parentElement.parentElement.classList.remove("active");
-            } else {
-                scent.parentElement.parentElement.classList.add("active");
+                if (i === j) {
+                    if (scent.parentElement.parentElement.classList.contains("active")) {
+                        scent.parentElement.parentElement.classList.remove("active");
+                    } else {
+                        scent.parentElement.parentElement.classList.add("active");
+                    };
+                } else {
+                    scent.parentElement.parentElement.classList.remove("active");
+                };
             };
         });
     });
