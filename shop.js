@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
      * Images
      */
 
-    const shownImage = document.querySelector(".product-image");
+    const shownImage = document.querySelectorAll(".product-image");
     const images = document.querySelectorAll(".product-small-image");
 
     images.forEach((image) => {
@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("click");
             const style = image.currentStyle || window.getComputedStyle(image, false);
             const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-
-            console.log(url);
             
-            shownImage.style.backgroundImage = `url(${url})`;
+            shownImage.forEach((img) => {
+                img.style.backgroundImage = `url(${url})`;
+            });
         });
     });
 
