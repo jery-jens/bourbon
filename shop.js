@@ -8,11 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     images.forEach((image) => {
         image.addEventListener("click", () => {
+            console.log("click");
             const style = image.currentStyle || window.getComputedStyle(image, false);
             const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");
             
             shownImage.style.backgroundImage = `url(${url})`;
         });
+
+        image.addEventListener("touchstart", () => {
+            console.log("test");
+        })
     });
 
     /**
