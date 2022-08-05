@@ -11,13 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("click");
             const style = image.currentStyle || window.getComputedStyle(image, false);
             const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+
+            console.log(url);
             
             shownImage.style.backgroundImage = `url(${url})`;
         });
-
-        image.addEventListener("touchstart", () => {
-            console.log("test");
-        })
     });
 
     /**
