@@ -19,6 +19,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /**
+     * Select
+     */
+
+    const selectionField = document.querySelector(".select-field").children;
+    const randomOption = Math.floor(Math.random() * selectionField.length);
+
+    for (let i = 0; i < selectionField.length; i++) {
+        if (i === randomOption) {
+            selectionField[i].selected = true;
+        } else {
+            selectionField[i].selected = false;
+        };
+    };
+
+    /**
      * Selector
      */
 
