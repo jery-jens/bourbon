@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     /**
      * Selector
      */
+ 
+    const button = document.querySelector(".button.disabled");
+    const required = document.querySelector(".required");
+
+    Webflow.push(function () {
+        button.disabled = true;
+    });
 
     const productBoxes = document.querySelectorAll(".product-box");
     let price = 0;
@@ -106,6 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
                     document.getElementById(productName).value = productAmount;
+
+                    if (price === 0) {
+                        button.classList.add("disabled");
+                        button.disabled = true;
+                        required.style.display = "block";
+                    };
                 };
             });
 
@@ -173,6 +186,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 document.querySelector(".price").innerHTML = `£${price.toFixed(2)}`;
                 document.getElementById(productName).value = productAmount;
+
+                if (price !== 0) {
+                    button.classList.remove("disabled");
+                    button.disabled = false;
+                    required.style.display = "none";
+                };
             });
         });
     });
